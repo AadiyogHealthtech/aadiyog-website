@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Samantha - Personal Trainer & Fitness HTML5 Template</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/table.css">
+</head>
+<body>
+	<header class="dt-header dt-header_blue">
+		<span class="dt-logo">Samantha - Personal Trainer & Fitness HTML5 Template</span>
+	</header>
+	<div class="dt-container dt-container_flex">
+		<aside class="dt-navbar">
+			<nav class="dt-navbar__nav">
+				<div class="dt-navbar__section">
+					<ul class="dt-navbar__list">
+						<li><a href="#files_structure" class="dt-navbar__link">File structure</a></li>
+						<li>
+							<a href="#settings" class="dt-navbar__link">Settings</a>
+							<ul class="dt-navbar__list">
+								<li><a href="#include_fonts" class="dt-navbar__link dt-navbar__link_nested">Include Fonts</a></li>
+								<li><a href="#include_icons" class="dt-navbar__link dt-navbar__link_nested">Edit Icons</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#html_structure" class="dt-navbar__link">HTML structure</a>
+							<ul class="dt-navbar__list">
+								<li><a href="#html_structure_header" class="dt-navbar__link dt-navbar__link_nested">"Header" Section</a></li>
+								<li><a href="#html_structure_footer" class="dt-navbar__link dt-navbar__link_nested">"Footer" Section</a></li>
+								<li><a href="#html_structure_home" class="dt-navbar__link dt-navbar__link_nested">"Home" Page</a></li>
+								<li><a href="#html_structure_inner" class="dt-navbar__link dt-navbar__link_nested">"Inner" Pages</a></li>
+							</ul>
+						</li>
+						<li><a href="#icons" class="dt-navbar__link">Icons</a></li>
+						<li><a href="#credits" class="dt-navbar__link">Credits</a></li>
+					</ul>
+				</div>
+			</nav>
+		</aside>
+		<div class="dt-content dt-content_scroll-bar-yes">
+			<div class="dt-section">
+				<h2 class="dt-title">Samantha - Personal Trainer & Fitness HTML5 Template</h2>
+				<p>by: bslthemes</p>
+				<p>Thank you for your purchase. If you have any questions, mail me to - <a href="mailto:beshleyua@gmail.com">beshleyua@gmail.com</a></p>
+			</div>
+			<article id="files_structure" class="dt-section">
+				<h2 class="dt-title">File structure</h2>
+				<p>After unpacking archive, you'll see this structure:</p>
+				<div class="dt-info-block">
+					<pre class="code language-html">
+						<code>
+html/
+│
+├──doc/
+├──template/
+│──│──css/
+│──│──img/
+│──│──js/
+│──│──│──aos.js
+│──│──│──beforeafter.js
+│──│──│──custom.js
+│──│──│──jquery-3.6.0.min.js
+│──│──│──jquery-weekdays.min.js
+│──│──│──jquery.fancybox.min.js
+│──│──│──jquery.nice-select.min.js
+│──│──│──jquery.quinn.min.js
+│──│──│──jquery.slim.min.js
+│──│──│──owl.carousel.min.js
+│──│──│──range-slider.js
+│──│──│──underscore-1.3.1.js
+│──│──404.html
+│──│──about.html
+│──│──apointment-1.html
+│──│──apointment-2.html
+│──│──blog-details.html
+│──│──blog-style-1.html
+│──│──blog-style-2.html
+│──│──contact.html
+│──│──index.html
+│──│──online-schedule.html
+│──│──portfolio-details.html
+│──│──portfolio.html
+│──│──pricing-table.html
+│──│──schedule.html
+						</code>
+					</pre>
+				</div>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">css/</span> - all CSS styles for template
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">css/style.css</span> - main CSS styles for template
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">js/</span> - all JS library for template
+						<ul class="dt-list dt-list_nested">
+							<li><span class="dt-label dt-label_bold">js/custom.js</span> - main JS for template</li>
+						</ul>
+					</li>
+				</ul>
+			</article>
+			<article id="settings" class="dt-section">
+				<h2 class="dt-title">Settings</h2>
+			</article>
+			<article id="include_fonts" class="dt-section">
+				<h2 class="dt-title">Include of fonts</h2>
+				<p>To use fonts, you must add @import in '/css/style.css' file:</p>
+				<pre class="code language-html">
+					<code>
+						@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+					</code>
+				</pre>
+				<p>
+					Next step is to replace "font-family: '...';" to your fonts names.
+				</p>
+			</article>
+			<article id="include_icons" class="dt-section">
+				<h2 class="dt-title">Edit Icons</h2>
+				<p>In this template are defined some of classes for icons, see all icons here - <a href="https://fontawesome.com/icons?d=gallery&s=brands,solid&m=free">https://fontawesome.com/icons?d=gallery&s=brands,solid&m=free</a>, use search and select icons.</p>
+				<p>Copy icon class (for example "fas fa-code") and add to tag in html file like this:</p>
+				<pre class="code language-html">
+					<code>
+&lt;i class="fas fa-pencil-ruler"&gt;&lt;/i&gt;
+					</code>
+				</pre>
+			</article>
+			<article id="html_structure" class="dt-section">
+				<h2 class="dt-title">HTML structure</h2>
+				<pre class="code language-html">
+					<code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zxx"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Samantha - index&lt;/title&gt;
+  &lt;link rel="icon" href="img/logo-icon.png"&gt;
+
+  &lt;!-- CSS only --&gt;
+	&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"&gt;
+  &lt;!-- owl carousel --&gt;
+  &lt;link rel="stylesheet" href="css/owl.carousel.min.css"&gt;
+  &lt;link rel="stylesheet" href="css/owl.theme.default.min.css"&gt;
+ 	&lt;!-- fancybox --&gt;
+	&lt;link rel="stylesheet" href="css/jquery.fancybox.min.css"&gt;
+	&lt;!-- aos --&gt;
+	&lt;link rel="stylesheet" href="css/aos.css"&gt;
+  &lt;!-- nice-select --&gt;
+  &lt;link rel="stylesheet" href="css/nice-select.css"&gt;
+  &lt;!-- style --&gt;
+  &lt;link rel="stylesheet" href="css/style.css"&gt;
+  &lt;!-- responsive --&gt;
+  &lt;link rel="stylesheet" href="css/responsive.css"&gt;
+
+  &lt;!-- color --&gt;
+  &lt;link rel="stylesheet" href="css/color.css"&gt;
+
+  &lt;!-- Font Awesome 5 --&gt;
+
+  &lt;script src="https://kit.fontawesome.com/27a041baf1.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+ &lt;/head&gt;
+&lt;body class="menu-layer"&gt;
+	&lt;div class="page-loader"&gt;
+		&lt;div class="spinner"&gt;&lt;/div&gt;
+		&lt;div class="txt"&gt;Samantha&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;header&gt;
+    ...
+  &lt;/header&gt;
+	&lt;section class="featured-one" style="background-image: url(./img/blur.png)"&gt;
+	  ...
+	&lt;/section&gt;
+	&lt;section class="about-section gap"&gt;
+	  ...
+	&lt;/section&gt;
+	&lt;section class="benefits-section gap no-top"&gt;
+		...
+	&lt;/section&gt;
+	&lt;section class="my-program" style="background-image: url(./img/blur-1.png)"&gt;
+		...
+	&lt;/section&gt;
+	&lt;section class="calculator-section gap no-bottom"&gt;
+		...
+	&lt;/section&gt;
+	&lt;section class="blog-section gap no-bottom" style="background-image: url(./img/blur-3.png)"&gt;
+		...
+	&lt;/section&gt;
+	&lt;section class="testimonials-section gap "&gt;
+		...
+	&lt;/section&gt;
+	&lt;section class="ready-to"&gt;
+		...
+	&lt;/section&gt;
+	&lt;footer class="one"&gt;
+		...
+	&lt;/footer&gt;
+
+	&lt;!-- scroll top --&gt;
+	&lt;button class="scroll-top-btn hidden"&gt;&#11014;&lt;/button&gt;
+	&lt;!-- bootstrap --&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+	&lt;!-- jQuery --&gt;
+	&lt;script src="js/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+	&lt;!-- nice-select --&gt;
+	&lt;script src="js/jquery.nice-select.min.js"&gt;&lt;/script&gt;
+	&lt;!-- owl.carousel --&gt;
+	&lt;script src="js/owl.carousel.min.js"&gt;&lt;/script&gt;
+	&lt;!-- fancybox --&gt;
+	&lt;script src="js/jquery.fancybox.min.js"&gt;&lt;/script&gt;
+	&lt;!-- aos --&gt;
+	&lt;script src="js/aos.js"&gt;&lt;/script&gt;
+	&lt;!-- beforeafter --&gt;
+	&lt;script src="js/beforeafter.js"&gt;&lt;/script&gt;
+
+	&lt;!-- custom --&gt;
+	&lt;script src="js/custom.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+					</code>
+				</pre>
+			</article>
+			<article id="html_structure_header" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Header"</h2>
+				<pre class="code language-html">
+					<code>
+&lt;header&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row align-items-center"&gt;
+      &lt;div class="col-lg-2"&gt;
+        &lt;div class="logo-icon"&gt;
+          &lt;a href="index.html"&gt;
+          &lt;img src="img/logo.svg" alt="logo"&gt;
+          &lt;/a&gt;
+          &lt;img alt="bar-menu" class="bar-menu" src="img/burger-menu-icon.svg"&gt;
+        &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div class="col-lg-9"&gt;
+         &lt;div class="menu-bar"&gt;
+           &lt;nav&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="menu-item-has-children"&gt;&lt;a href="#"&gt;Schedule&lt;/a&gt;
+                &lt;!-- First Tier Drop Down --&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="schedule.html"&gt;Schedule&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="online-schedule.html"&gt;online Schedule &lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="apointment-1.html"&gt;Apointment 1 &lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="apointment-2.html"&gt;Apointment 2 &lt;/a&gt;&lt;/li&gt;
+
+
+                &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="menu-item-has-children"&gt;&lt;a href="#"&gt;Pages&lt;/a&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="portfolio.html"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="portfolio-details.html"&gt;Portfolio Details&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="pricing-table.html"&gt;Pricing Table&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="404.html"&gt;404&lt;/a&gt;&lt;/li&gt;
+
+
+                &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="menu-item-has-children"&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;
+                  &lt;ul&gt;
+                      &lt;li&gt;&lt;a href="blog-style-1.html"&gt;Blog Style 1&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="blog-style-2.html"&gt;Blog Style 2&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="blog-details.html"&gt;Blog Details&lt;/a&gt;&lt;/li&gt;
+
+
+                  &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+
+              &lt;/ul&gt;
+          &lt;/nav&gt;
+         &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div class="col-lg-1"&gt;
+        &lt;div class="extras"&gt;
+         &lt;a href="javascript:void(0)" id="desktop-menu" class="menu-btn"&gt;
+            &lt;img alt="burger-menu" src="img/burger-menu-icon.svg"&gt;
+                      &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="menu-wrap"&gt;
+           &lt;div class="menu-inner ps ps--active-x ps--active-y"&gt;
+               &lt;span class="menu-cls-btn"&gt;&lt;i class="cls-leftright"&gt;&lt;/i&gt;&lt;i class="cls-rightleft"&gt;&lt;/i&gt;&lt;/span&gt;
+               &lt;div class="hambur"&gt;
+                &lt;h3&gt;Let’s be Together&lt;/h3&gt;
+                &lt;p&gt;Don't miss the next workout:&lt;/p&gt;
+                &lt;div class="data-to"&gt;
+                &lt;h6&gt;22&lt;span&gt;june&lt;/span&gt;&lt;/h6&gt;
+                &lt;h5&gt;6:30pm&lt;/h5&gt;
+                &lt;p&gt;&lt;b&gt;Huntington Central Park Equestrian Center&lt;/b&gt;
+                          18381 Goldenwest St, Huntington Beach, CA 92648, United States&lt;/p&gt;
+
+                &lt;/div&gt;
+                &lt;div class="contact-map"&gt;
+
+          &lt;/div&gt;
+               &lt;/div&gt;
+           &lt;/div&gt;
+                &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="mobile-nav" id="mobile-nav" style="display: block;"&gt;
+
+          &lt;div class="res-log"&gt;
+
+            &lt;a href="index.html"&gt;
+
+              &lt;img src="img/logo-w.svg" alt="Responsive Logo"&gt;
+
+            &lt;/a&gt;
+
+          &lt;/div&gt;
+
+          &lt;ul&gt;
+
+                &lt;li&gt;
+
+                  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+
+                &lt;/li&gt;
+
+                &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;
+
+                &lt;/li&gt;
+
+                &lt;li class="menu-item-has-children"&gt;&lt;a href="JavaScript:void(0)"&gt;Schedule&lt;/a&gt;
+
+                  &lt;ul class="sub-menu"&gt;
+
+                    &lt;li&gt;&lt;a href="schedule.html"&gt;Schedule&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="online-schedule.html"&gt;online Schedule&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="apointment-1.html"&gt;Apointment 1&lt;/a&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;a href="apointment-2.html"&gt;Apointment 2&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;/ul&gt;
+
+                &lt;/li&gt;
+
+                  &lt;li class="menu-item-has-children"&gt;&lt;a href="JavaScript:void(0)"&gt;Pages&lt;/a&gt;
+
+                  &lt;ul class="sub-menu"&gt;
+
+                      &lt;li&gt;&lt;a href="portfolio.html"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="portfolio-details.html"&gt;Portfolio Details&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="pricing-table.html"&gt;Pricing Table&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="404.html"&gt;404&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;/ul&gt;
+
+                &lt;/li&gt;
+
+                &lt;li class="menu-item-has-children"&gt;&lt;a href="JavaScript:void(0)"&gt;Blog&lt;/a&gt;
+                  &lt;ul class="sub-menu"&gt;
+
+                      &lt;li&gt;&lt;a href="blog-style-1.html"&gt;Blog Style 1&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="blog-style-2.html"&gt;Blog Style 2&lt;/a&gt;&lt;/li&gt;
+                      &lt;li&gt;&lt;a href="blog-details.html"&gt;Blog Details&lt;/a&gt;&lt;/li&gt;
+
+                  &lt;/ul&gt;
+
+                &lt;/li&gt;
+
+                &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+
+              &lt;/ul&gt;
+              &lt;ul class="Contacts mobil"&gt;
+
+                &lt;li&gt;&lt;a href="callto:+1(495)2311782"&gt;&lt;i class="fa-solid fa-phone"&gt;&lt;/i&gt;+1 (495) 231 17 82&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="hana_evans@gmail.com"&gt;&lt;i class="fa-regular fa-envelope"&gt;&lt;/i&gt;hana_evans@gmail.com&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+        &lt;span  class="res-cross"&gt;&lt;i class="cls-leftright"&gt;&lt;/i&gt;&lt;i class="cls-rightleft"&gt;&lt;/i&gt;&lt;/span&gt;
+
+    &lt;/div&gt;
+&lt;/header&gt;
+					</code>
+				</pre>
+			</article>
+			<article id="html_structure_footer" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Footer"</h2>
+				<pre class="code language-html">
+					<code>
+&lt;footer class="one"&gt;
+  &lt;div class="container"&gt;
+     &lt;div class="footer-title gap"&gt;
+        &lt;h3&gt;subscribe to newsletter&lt;/h3&gt;
+        &lt;p&gt;Duis at consectetur lorem donec massa sapien faucibus et molestie. Ut etiam sit amet nisl purus. Massa tempor nec feugiat nisl pretium.&lt;/p&gt;
+        &lt;form&gt;
+          &lt;input type="text" name="Your Name" placeholder="Your Name"&gt;
+          &lt;input type="text" name="Email" placeholder="Your Email Addres"&gt;
+          &lt;a href="javascript:void(0)" class="button"&gt;Subscribe&lt;/a&gt;
+          &lt;div class="checkbox-Website"&gt;
+            &lt;input type="checkbox" id="weekday-2" name="weekday-2" value="Saturday"&gt;
+
+             &lt;label for="weekday-2"&gt;Nec feugiat in fermentum posuere urna nec tincidunt praesent.&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+
+     &lt;/div&gt;
+     &lt;div class="gap background-title"&gt;
+        &lt;div class="row"&gt;
+
+          &lt;div class="col-lg-4 col-md-6 col-sm-12"&gt;
+            &lt;div class="description"&gt;
+              &lt;img src="img/logo-w.svg" alt="logo"&gt;
+              &lt;p&gt;Elementum facilisis leo vel fringilla
+               est ullamcorper. Ac tortor vitae
+               purus faucibus ornare suspendisse.&lt;/p&gt;
+               &lt;ul class="social-icons"&gt;
+                  &lt;li&gt;&lt;a class="f" href="javascript:void(0)"&gt;&lt;i class="fa-brands fa-facebook-f"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="t" href="javascript:void(0)"&gt;&lt;i class="fa-brands fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a class="in" href="javascript:void(0)"&gt;&lt;i class="fa-brands fa-instagram"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-4 col-md-6 col-sm-12"&gt;
+             &lt;div class="Menu"&gt;
+              &lt;p&gt;MENU&lt;/p&gt;
+              &lt;ul class="Menu-br"&gt;
+                &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="schedule.html"&gt;Schedule&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="blog-style-1.html"&gt;Blog&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="contact.html"&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="online-schedule.html"&gt;Online Schedule&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+             &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-lg-4 col-md-6 col-sm-12"&gt;
+            &lt;div class="Menu contac"&gt;
+              &lt;p&gt;Contacts&lt;/p&gt;
+              &lt;ul class="Contacts"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa-solid fa-location-dot"&gt;&lt;/i&gt;
+                Themeforest, Envato HQ 24 Fifth st., Los Angeles, USA&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="callto:+1(495)2311782"&gt;&lt;i class="fa-solid fa-phone"&gt;&lt;/i&gt;+1 (495) 231 17 82&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="mailto:hana_evans@gmail.com"&gt;&lt;i class="fa-regular fa-envelope"&gt;&lt;/i&gt;hana_evans@gmail.com&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="bottom-section"&gt;
+      &lt;div&gt;
+      &lt;p&gt;© 2022 Samantha. All rights reserved&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;ul class="Privacy"&gt;
+          &lt;li&gt;&lt;a href="javascript:void(0)"&gt;Privacy Policy&lt;/a&gt;&lt;/li&gt;
+
+             &lt;li&gt;&lt;a href="javascript:void(0)"&gt;Term of Service&lt;/a&gt;&lt;/li&gt;
+
+             &lt;li&gt;&lt;a href="javascript:void(0)"&gt;Legal info&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+					</code>
+				</pre>
+			</article>
+			<article id="html_structure_home" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Home" pages</h2>
+				<pre class="code language-html">
+					<code>
+&lt;section class="featured-one" style="background-image: url(./img/blur.png)"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="about-section gap"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="benefits-section gap no-top"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="my-program" style="background-image: url(./img/blur-1.png)"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="calculator-section gap no-bottom"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="blog-section gap no-bottom" style="background-image: url(./img/blur-3.png)"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="testimonials-section gap "&gt;
+  &lt;div class="container-fluid"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="ready-to"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+					</code>
+				</pre>
+			</article>
+			<article id="html_structure_inner" class="dt-section">
+				<h2 class="dt-title">HTML structure of "Inner" pages</h2>
+				<pre class="code language-html">
+					<code>
+&lt;section class="hero-section"&gt;
+    &lt;div class="container"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/section&gt;
+ &lt;section class="about-section gap no-bottom" style="background-image: url(./img/blur.png)"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/section&gt;
+ &lt;section class="story-section" style="background-image: url(./img/blur-4.png)"&gt;
+		&lt;div class="container-fluid"&gt;
+			...
+		&lt;/div&gt;
+&lt;/section&gt;
+ &lt;section class="call-to-action gap no-bottom"&gt;
+	&lt;div class="container"&gt;
+		...
+	&lt;/div&gt;
+&lt;/section&gt;
+ &lt;section class="certificates-Section gap no-top"&gt;
+	&lt;div class="container"&gt;
+		...
+	&lt;/div&gt;
+&lt;/section&gt;
+					</code>
+				</pre>
+			</article>
+			<article id="icons" class="dt-section">
+				<h2 class="dt-title">Icons</h2>
+				<p>
+					In this template are defined some of classes for icons, your can see all icons here - https://fontawesome.com/icons?d=gallery&s=brands,solid&m=free
+				</p>
+			</article>
+			<article id="credits" class="dt-section">
+				<h2 class="dt-title">Sourse & Credits</h2>
+				<h3>Scripts</h3>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">jQuery</span> <a target="_blank" href="https://jquery.com/">https://jquery.com/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Nice Select</span> <a target="_blank" href="https://github.com/hernansartorio/jquery-nice-select">https://github.com/hernansartorio/jquery-nice-select</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Fancybox</span> <a target="_blank" href="http://fancyapps.com/fancybox/">http://fancyapps.com/fancybox/</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">BeforeAfter</span> <a target="_blank" href="https://mamedul.gitlab.io/dev-projects/jquery-before-after-slider">https://mamedul.gitlab.io/dev-projects/jquery-before-after-slider</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">OwlCarousel2</span> <a target="_blank" href="https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE">https://mamedul.gitlab.io/dev-projects/jquery-before-after-slider</a>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Bootstrap</span> <a target="_blank" href="https://getbootstrap.com/">https://getbootstrap.com/</a>
+					</li>
+				</ul>
+				<h3>Fonts</h3>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">Archivo Black</span>
+					</li>
+					<li>
+						<span class="dt-label dt-label_bold">Red Hat Display</span>
+					</li>
+          <li>
+						<span class="dt-label dt-label_bold">FontAwesome - </span> <a target="_blank" href="https://fontawesome.com/icons?d=gallery&s=brands,solid&m=free">https://fontawesome.com/icons?d=gallery&s=brands,solid&m=free</a>
+					</li>
+				</ul>
+				<h3>Images</h3>
+				<p>Any Images or logos used in previews are not included in this item or final purchase.</p>
+				<ul class="dt-list dt-list_nested dt-info-block">
+					<li>
+						<span class="dt-label dt-label_bold">Freepik, Flaticon</span>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+<script src="assets/rainbow-custom.min.js"></script>
+</body>
+</html>
