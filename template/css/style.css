@@ -82,6 +82,9 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 1px;
+    height: 1px;
+
 }
 .bar-menu{
     display: none;
