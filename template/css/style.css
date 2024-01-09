@@ -119,7 +119,7 @@ nav ul ul {
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
     display: inherit;
-    background-color: #bde800;
+    background-color: #F37003;
 }
 
 /* Fisrt Tier Dropdown */
@@ -554,7 +554,7 @@ img.Photo-4 {
     background-color: white;
     margin-left: -80px;
     padding: 10px;
-    border: solid 1px #bde800;
+    border: solid 1px #F37003;
     border-top: 0;
     border-left: 0;
     margin-bottom: 40px;
@@ -982,7 +982,7 @@ a.button.calculate {
 }
 .loop-slider.owl-theme .owl-dots .owl-dot.active span,
 .loop-slider.owl-theme .owl-dots .owl-dot:hover span {
-    background: #bde800;
+    background: #F37003;
 }
 .loop-slider.owl-carousel .owl-nav button.owl-prev {
     position: absolute;
@@ -1171,8 +1171,8 @@ ul.social-icons li a {
     margin-right: 20px;
 }
 ul.social-icons li a:hover {
-    border: 2px solid #bde800;
-    color: #bde800;
+    border: 2px solid #F37003;
+    color: #F37003;
 }
 
 ul.Menu-br {
@@ -1384,7 +1384,7 @@ body.menu-layer.active:before {
 }
 .menu-cls-btn:hover .cls-leftright,
 .menu-cls-btn:hover .cls-leftright, .menu-cls-btn:hover .cls-rightleft {
-    background-color: #bde800;
+    background-color: #F37003;
 }
 .menu-cls-btn:hover .cls-leftright {
   -webkit-transform: rotate(-45deg);
@@ -1860,7 +1860,7 @@ form.about-form .button {
     left: 6%;
     padding: 10px 15px;
     font-size: 14px;
-    border: solid 1px #bde800;
+    border: solid 1px #F37003;
 }
 .blog-img span.two{
     position: absolute;
@@ -1904,7 +1904,7 @@ form.about-form .button {
 }
 a.button.back:after {
     background-color: transparent;
-    border: solid 1px #bde800;
+    border: solid 1px #F37003;
 }
 a.button.back i{
     padding-left: 10px;
@@ -2118,7 +2118,7 @@ ul.fast.progra li h6:before{
     color: white;
     margin: 10px 0;
     display: inline-block;
-    border: solid 2px #bde800;
+    border: solid 2px #F37003;
     border-top: 0;
     border-left: 0;
 }
@@ -2265,7 +2265,7 @@ ul.fast.progra li h6:before{
 }
 .card-img.benefits {
     display: flex;
-    border: 1px solid #bde800;
+    border: 1px solid #F37003;
     border-left-color: white;
     border-top-color: white;
     padding: 25px;
@@ -2503,7 +2503,7 @@ ul.fast.progra li h6:before{
   content: "";
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #bde800 ;
+  border-top: 10px solid #F37003 ;
   height: 0;
   margin-left: -10px;
   left: 50%;
@@ -2779,7 +2779,7 @@ img.two-img {
     border: 0;
 }
 .weekdays-day:hover, .weekdays-list .weekday-selected{
-    background-color: #bde800;
+    background-color: #F37003;
     color: black;
 }
 /*apointment 2*/
@@ -2993,7 +2993,7 @@ img.two-img {
 .health-style a span {
     background-color: black;
     padding: 10px;
-    border: 1px solid #bde800;
+    border: 1px solid #F37003;
 }
 .blog-card .Post-details.blog {
     justify-content: start;
@@ -3132,7 +3132,7 @@ img.two-img {
     left: 6%;
     padding: 10px 15px;
     font-size: 14px;
-    border: solid 1px #bde800;
+    border: solid 1px #F37003;
 }
 .hana-evans {
     display: flex;
@@ -3174,7 +3174,7 @@ img.two-img {
     margin-top: 20px;
 }
 .hana-evans ul.social-icons li a:hover{
-    border: 2px solid #bde800;
+    border: 2px solid #F37003;
 }
 .previou .previous-post img{
     height: 100px;
@@ -3935,7 +3935,7 @@ li.menu-item-has-children.active {
 }
 .mobile-nav .res-cross:hover .cls-leftright,
 .mobile-nav .res-cross:hover .cls-leftright,.mobile-nav .res-cross:hover .cls-rightleft {
-    background-color: #bde800;
+    background-color: #F37003;
 }
 .mobile-nav .res-cross:hover .cls-leftright {
   -webkit-transform: rotate(-45deg);
