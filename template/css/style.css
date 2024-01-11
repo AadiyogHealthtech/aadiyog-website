@@ -80,11 +80,8 @@ figure {
 /*home 1*/
 .logo-icon {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
-    width: 1px;
-    height: 1px;
-
 }
 .bar-menu{
     display: none;
@@ -92,7 +89,7 @@ figure {
 
 nav ul {
     padding: 0;
-  margin: 0;
+    margin: 0;
     list-style: none;
     position: relative;
     }
@@ -1123,7 +1120,6 @@ input[type=checkbox] + label:active:before {
 }
 
 input[type=checkbox]:checked + label:before {
-    c
     vertical-align: top;
     border: 0;
 }
@@ -1577,7 +1573,7 @@ img.Photo-about-1 {
 ul.list{
     padding-top: 40px;
 }
-ul.list. li h6 {
+ul.list.li h6 {
     padding-top: 22px;
     padding-left: 25px;
     position: relative;
