@@ -295,7 +295,9 @@ header {
     color: #4c4c4c;
     width: 440px;
     height: 232px;
-    background-color: #ffffff52;
+    background-color: #ffffffea;
+    z-index: 99999;
+    backdrop-filter: blur(10px);
 }
 .points1 h6 {
     position: relative;
@@ -315,9 +317,10 @@ header {
 }
 .img-girl {
     position: absolute;
-    top: 10%;
+    top: 3.5%;
     left: 36%;
     z-index: 9999;
+    
 }
 .points1 img {
     position: absolute;
@@ -1016,20 +1019,23 @@ a.button.calculate {
     position: relative;
 }
 .gorgeous img.gorg {
-    position: absolute;
-    width: 100%;
-    z-index: -1;
+    position: relative;
+    width: 90%;
+    z-index: 1;
     top: 14%;
     height: auto;
     left: 0%;
     height: 460px;
 }
-.gorgeous:before {
+
+
+/* .gorgeous:before {
     content: url(../img/Points-style.png);
     position: absolute;
     right: 0;
     animation: bounce-3 20s infinite;
-}
+    z-index: -2;
+} */
 .ready-to .heading h6{
     font-weight: 700;
     padding-bottom: 35px;
@@ -1037,11 +1043,15 @@ a.button.calculate {
 }
 .gorgeous img {
     position: relative;
-    left: 40%;
+    width: 85%;
+    left: 10%;
+    top: -0.51rem;
     height: 640px;
 }
+
+
 .ready-to{
-    margin-bottom: 45px;
+    margin-bottom: 15px;
 }
 .ready-to .heading h3:after {
     left: 25%;
