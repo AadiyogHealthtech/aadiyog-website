@@ -4019,7 +4019,8 @@ ul.Contacts.mobil a {
     display: flex;
     font-size: 18px;
     color: white;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
+    text-transform: lowercase;
     font-family: 'Red Hat Display' ;
 }
 ul.Contacts.mobil li {
