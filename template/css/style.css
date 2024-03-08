@@ -80,11 +80,29 @@ figure {
 /*home 1*/
 .logo-icon {
     display: flex;
-    align-items: left;
-    justify-content: space-between;
+    align-items: center; /* Change this from left to center to vertically center the items */
+    justify-content: flex-start; /* This will space out the logo and the burger menu */
+    padding: 10px; /* Adjust the padding as needed */
 }
 .bar-menu{
     display: none;
+}
+
+@media screen and (max-width: 990px) {
+    .logo-icon {
+        justify-content: left; /* Center the logo */
+        padding-right: 10px; /* Same for the right side */
+    }
+
+    .bar-menu {
+        display: none; /* Show the burger menu */
+        position: absolute; /* Position it absolutely within the .logo-icon container */
+        top: 50%; /* Align it vertically */
+        transform: translateY(-50%); /* Ensure it's centered by translating it up by half its height */
+        right: 10px; /* Distance from the right edge */
+        max-width: 50px;
+        max-height: 50px;
+    }
 }
 
 nav ul {
@@ -229,6 +247,7 @@ header {
     top: 2%;
     z-index: 11111111;
 }
+
 .build h2 {
     width: 70%;
     text-transform: uppercase;
@@ -242,6 +261,13 @@ header {
 .build-perferct {
     display: flex;
 }
+
+@media screen and (max-width: 990px) {
+    .build {
+        padding-top: 15%;
+    }
+}
+
 /*button*/
 .button {
   display: inline-block;
@@ -1130,6 +1156,7 @@ footer.one{
 }
 .hero-blog ul.crumbs {
     display: inline-flex;
+    
 }
 input[type=checkbox] + label {
   color: white;
@@ -1529,6 +1556,12 @@ ul.crumbs {
 .content p{
     width: 70%;
     padding-bottom: 20px;
+}
+
+@media screen and (max-width: 990px) {
+    .content {
+        margin-top: 70px; /* Add extra space at the top of .build div */
+    }
 }
 .about-photo-section img,
 .about-section-photo img{
