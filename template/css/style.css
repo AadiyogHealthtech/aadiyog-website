@@ -4137,3 +4137,69 @@ ul.Contacts.mobil li {
     -webkit-box-shadow: 2px 31px 61px -14px rgb(0 0 0 / 14%);
     -moz-box-shadow: 2px 31px 61px -14px rgba(0,0,0,0.14);
 }
+.download-button {
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: darkorange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-align: right;
+}
+
+.download-button:hover {
+    background-color: #F37003;
+}
+.download-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust gap between divs */
+
+  }
+  
+  .download-box {
+    flex: 1; /* Makes both divs equal width */
+    display: flex;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* background-color: #f7f9ff; Matches preferred theme */
+    text-align: center;
+  }
+  
+  .icon {
+    width: 50px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  h6 {
+    font-family: 'Nunito', sans-serif; /* Matches preferred font */
+    color: #333; /* Text color */
+    margin: 0;
+  }
+  .icon-container {
+    display: inline-block;
+    transform: scale(2); /* Scale the icon */
+    transform-origin: center; /* Ensure scaling is centered */
+  }
+  
+  .material-icons {
+    font-size: 96px; /* Increase size 3 times from the default 24px */
+    line-height: 1;  /* Adjust line height to align the icon properly */
+  }
+  
+  .android-icon {
+    color: #3ddc84; /* Optional: Android green color */
+  }
+  
+  .ios-icon {
+    color: #000; /* Optional: Black for iOS */
+  }
