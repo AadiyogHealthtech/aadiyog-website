@@ -390,7 +390,7 @@ header {
     position: relative;
 }
 .duis i {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0px);
     border: 1px white solid;
     left: 37%;
     background-color: #ffffff54;
