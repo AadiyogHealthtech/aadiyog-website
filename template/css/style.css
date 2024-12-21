@@ -2323,7 +2323,7 @@ ul.fast.progra li h6:before {
 .photo-preview {
   display: flex;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
   bottom: 27%;
   z-index: 1;
   left: 55%;
