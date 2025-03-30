@@ -89,7 +89,7 @@ const PricingPlans = () => {
 
     return (
       <div>
-        <span className="line-through text-gray-400 mr-2">
+        <span className="line-through text-xl text-gray-400 mr-2 ">
           ₹{totalOriginalPrice}
         </span>
         <span>
