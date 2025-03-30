@@ -1,9 +1,10 @@
 import React from "react";
 import HeroImage from "../assets/HeroImage.png";
 import arrow from "../assets/chevron-right.svg";
+
 function PersonalizedSection() {
   return (
-    <section className="py-16 px-4 font-sans">
+    <section className="py-16 font-sans w-full">
       {/* Mobile view */}
       <div className="md:hidden">
         <span className="text-md text-gray-700 tracking-wider font-semibold">
@@ -58,11 +59,11 @@ function PersonalizedSection() {
         </div>
       </div>
 
-      {/* Desktop view */}
-      <div className="hidden md:block container mx-auto px-8">
-        <div className="flex flex-row justify-center items-center h-full">
+      {/* Desktop view - Modified to take full width */}
+      <div className="hidden md:block w-full">
+        <div className="flex flex-row justify-center items-center h-full w-full">
           {/* Left content */}
-          <div className="w-1/2 pr-12">
+          <div className="w-1/2 pl-8 pr-12">
             <span className="text-sm text-gray-700 tracking-wider">
               Transform
             </span>
