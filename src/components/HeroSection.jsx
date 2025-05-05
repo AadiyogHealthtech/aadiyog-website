@@ -60,7 +60,7 @@ function HeroSection() {
           </div>
 
           {/* Down arrow */}
-          <div className="mt-32 flex justify-start">
+          <div className="mt-50 flex justify-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8 text-gray-400 animate-bounce"
