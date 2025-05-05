@@ -6,7 +6,7 @@ function PersonalizedSection() {
     window.location.href = "https://aadiyog-client.netlify.app/";
   };
   return (
-    <section className="py-16 px-4 font-sans">
+    <section className="py-16 font-sans ">
       {/* Mobile view */}
       <div className="md:hidden">
         <span className="text-md text-gray-700 tracking-wider font-semibold">
@@ -65,7 +65,7 @@ function PersonalizedSection() {
       </div>
 
       {/* Desktop view */}
-      <div className="hidden md:block container mx-auto px-8">
+      <div className="hidden md:block container min-w-full px-5">
         <div className="flex flex-row justify-center items-center h-full">
           {/* Left content */}
           <div className="w-1/2 pr-12">

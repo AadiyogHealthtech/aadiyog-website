@@ -324,8 +324,8 @@ const GetInTouch = () => {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden md:block">
-        <div className="max-w-6xl mx-auto flex flex-row justify-between items-start">
+      <div className="hidden md:block min-w-full">
+        <div className="mx-8  flex flex-row justify-between items-start">
           <div className="w-1/2 mb-8">
             <h3 className="font-bold mb-1">Connect</h3>
             <h2 className="text-[40px] font-bold mb-4 leading-tight">
@@ -411,7 +411,7 @@ const GetInTouch = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto flex justify-between mt-16">
+        <div className="mx-8  flex justify-between mt-32">
           <div>
             <h3 className="text-2xl font-bold mb-4">Join our newsletter</h3>
             <p className="text-gray-700 text-base mb-6">
