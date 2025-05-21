@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import mainLogo from "../assets/mainLogo.svg";
 import HeaderLogo from "../assets/HeaderLogo1.svg";
 
 function Header() {

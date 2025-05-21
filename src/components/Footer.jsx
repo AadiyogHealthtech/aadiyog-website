@@ -1,5 +1,5 @@
 import React from "react";
-import mainLogo from "../assets/mainLogo.svg";
+// import mainLogo from "../assets/mainLogo.svg";
 import mainLogo1 from "../assets/aadiyog-website-logo.png";
 function Footer() {
   return (
@@ -38,7 +38,7 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">Terms</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900">
+                <a href="/PrivacyPolicy" className="text-gray-600 hover:text-gray-900">
                   Privacy Policy
                 </a>
               </li>
@@ -47,7 +47,7 @@ function Footer() {
                   Terms of Use
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-gray-600 hover:text-gray-900">
                   Support Center
                 </a>
@@ -56,7 +56,7 @@ function Footer() {
                 <a href="#" className="text-gray-600 hover:text-gray-900">
                   Community Forum
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -65,7 +65,7 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">Social</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900">
+                <a href="https://www.instagram.com/aadiyog__/" className="text-gray-600 hover:text-gray-900">
                   Instagram
                 </a>
               </li>
@@ -75,12 +75,12 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900">
+                <a href="https://x.com/Aadiyog___" className="text-gray-600 hover:text-gray-900">
                   Twitter
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900">
+                <a href="https://www.linkedin.com/company/aadiyog-healthtech" className="text-gray-600 hover:text-gray-900">
                   LinkedIn
                 </a>
               </li>
