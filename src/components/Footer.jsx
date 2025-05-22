@@ -38,7 +38,7 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">Terms</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/PrivacyPolicy" className="text-gray-600 hover:text-gray-900">
+                <a href="/privacy" className="text-gray-600 hover:text-gray-900">
                   Privacy Policy
                 </a>
               </li>
