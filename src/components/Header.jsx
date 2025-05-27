@@ -72,7 +72,7 @@ function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden flex flex-col h-screen">
+        <div className="md:hidden mx-2 flex flex-col h-screen">
           <a
             href="#home"
             onClick={handleNavClick}
@@ -118,7 +118,7 @@ function Header() {
               </svg>
             </button>
             {isDropdownOpen && (
-              <div className="bg-orange-500 text-white">
+              <div className="bg-orange-500 mx-4 text-white">
                 <a
                   href="#contact"
                   onClick={handleNavClick}

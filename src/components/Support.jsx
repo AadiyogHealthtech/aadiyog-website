@@ -9,7 +9,7 @@ function Support() {
   const logos = [img1, img2, img3, wadhwani, neuronlogo];
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-white overflow-hidden">
+    <section className="py-16 px-4  md:px-8 bg-white overflow-hidden">
       <style>
         {`
           @keyframes scroll {

@@ -72,9 +72,9 @@ const TestimonialComponent = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="w-full mx-auto px-4 py-12 md:p-4 md:h-screen flex flex-col md:justify-center font-sans">
+    <div className="w-full mx-auto px-4 py-12 md:p-4 md:px-14 md:h-screen flex flex-col md:justify-center font-sans">
       {/* Mobile view */}
-      <div className="md:hidden">
+      <div className="md:hidden mx-1">
         {/* Navigation dots and arrows */}
         <div className="flex justify-between items-center mb-6">
           {/* Indicator dots */}

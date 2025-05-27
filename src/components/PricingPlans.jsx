@@ -101,7 +101,7 @@ const PricingPlans = () => {
   };
 
   return (
-    <div className="w-full max-w-8xl mx-auto p-4 mt-32 font-sans">
+    <div className="w-full max-w-8xl mx-auto md:px-14 p-4 mt-32 font-sans">
       {/* Header */}
       <div className="text-center mb-8">
         <h2 className="text-md mb-2 font-bold text-gray-800">Affordable</h2>

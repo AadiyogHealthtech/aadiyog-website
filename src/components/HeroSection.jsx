@@ -3,19 +3,19 @@ import HeroImage from "../assets/HeroImage.png";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col bg-white h-screen mb-16 font-sans">
+    <section className="flex flex-col  bg-white h-screen mb-2 font-sans">
       {/* Mobile view content */}
       <div className="md:hidden">
-        <div className="p-4">
+        <div className="p-4 mx-2">
           <h1 className="text-4xl font-bold mb-4">
             Transform Your Yoga Practice with AI Insights
           </h1>
 
-          <div className="flex gap-2 mb-4">
-            <button className="bg-orange-500 text-white px-6 py-3 flex-1 hover:bg-orange-600 transition cursor-pointer">
+          <div className="flex gap-2 place-content-start mb-1">
+            <button className="bg-orange-500 text-white px-6 py-3  hover:bg-orange-600 transition cursor-pointer">
               Download Now
             </button>
-            <button className="border border-gray-800 text-gray-950 px-6 py-3 flex-1 hover:bg-gray-100 transition cursor-pointer">
+            <button className="border border-gray-800  text-gray-950 px-6 py-2  hover:bg-gray-100 transition cursor-pointer">
               Try It
             </button>
           </div>
@@ -34,7 +34,7 @@ function HeroSection() {
       {/* Desktop view layout */}
       <div className="hidden md:flex h-screen">
         {/* Left content for desktop */}
-        <div className="w-1/2 p-16 flex flex-col justify-center">
+        <div className="w-2/5 p-14 flex flex-col justify-center relative">
           <h1 className="text-5xl font-bold text-orange-500 mb-6">
             Transform Your Yoga Practice with
             <span className="block">AI Insights</span>
@@ -60,7 +60,7 @@ function HeroSection() {
           </div>
 
           {/* Down arrow */}
-          <div className="mt-50 flex justify-start">
+          <div className="absolute bottom-8 left-16">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8 text-gray-400 animate-bounce"
@@ -79,7 +79,7 @@ function HeroSection() {
         </div>
 
         {/* Right image for desktop */}
-        <div className="w-1/2">
+        <div className="w-3/5">
           <img
             src={HeroImage}
             alt="Person practicing yoga on beach at sunset with phone showing AI feedback"

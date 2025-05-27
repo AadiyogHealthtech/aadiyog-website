@@ -117,7 +117,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="w-full bg-white py-16 px-4 min-h-screen font-sans">
+    <div className="w-full bg-white py-16 px-0 md:px-6 min-h-screen font-sans">
       <style>
         {`
           @keyframes spin {

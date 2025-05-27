@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="bg-white  pt-16 mt-32 font-sans ">
       <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-black pt-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-black pt-12">
           {/* Column One */}
           <div className="flex flex-col items-center text-center">
             <h3 className="text-lg font-semibold mb-4">Details</h3>

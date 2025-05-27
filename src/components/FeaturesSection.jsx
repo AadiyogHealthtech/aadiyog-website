@@ -9,8 +9,8 @@ function FeaturesSection() {
     window.location.href = "https://aadiyog-client.netlify.app/";
   };
   return (
-    <section className="py-16 px-4 md:px-8 bg-white font-sans">
-      <div className="">
+    <section className="py-4 px-4 md:px-14 bg-white font-sans">
+      <div className="md:mt-6">
         {/* Section heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-16 text-left">
           Experience Real-Time Feedback with Our

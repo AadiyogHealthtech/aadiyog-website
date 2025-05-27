@@ -6,7 +6,7 @@ function PersonalizedSection() {
     window.location.href = "https://aadiyog-client.netlify.app/";
   };
   return (
-    <section className="py-16 font-sans ">
+    <section className="py-16 mx-4 md:px-8 font-sans ">
       {/* Mobile view */}
       <div className="md:hidden">
         <span className="text-md text-gray-700 tracking-wider font-semibold">

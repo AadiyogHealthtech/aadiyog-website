@@ -21,7 +21,7 @@ function App() {
       <div className="min-h-screen flex flex-col min-w-full ">
         <style>{scrollBehaviorStyle}</style>
 
-        <Header />
+        {/* <Header /> */}
 
         <main className="flex-grow">
           <Routes>
@@ -33,9 +33,9 @@ function App() {
           </Routes>
         </main>
 
-        <footer className="min-h-300px">
+        {/* <footer className="min-h-300px">
           <Footer />
-        </footer>
+        </footer> */}
 
         <ScrollToTop />
       </div>
