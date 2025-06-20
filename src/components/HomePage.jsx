@@ -17,9 +17,7 @@ function HomePage() {
         <FeaturesSection />
         <PersonalizedSection />
       </div>
-      <div id="testimonials">
-        <TestimonialComponent />
-      </div>
+      
       <div id="support">
         <Support />
       </div>
