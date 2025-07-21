@@ -117,7 +117,7 @@ const PrivacyPolicy = () => {
         <p className="mx-8 my-4">We retain your information while your account is active or as needed for services, legal obligations, or business purposes. If you delete your account, personal information is deleted within 30 days unless otherwise required.</p>
 
         <h2 className="text-2xl font-semibold mx-6 mb-4">8. Children's Privacy</h2>
-        <p className="mx-8 my-4">Our app is not intended for children under 3. We do not knowingly collect personal information from them. If discovered, it will be deleted immediately.</p>
+        <p className="mx-8 my-4">Our app is not intended for children under 18. We do not knowingly collect personal information from them. If discovered, it will be deleted immediately.</p>
 
         <h2 className="text-2xl font-semibold mx-6 mb-4">9. International Data Transfers</h2>
         <p className="mx-8 my-4">If you're outside India, your data may be processed in other countries where our servers or providers are located. Safeguards are in place to protect your data during such transfers.</p>
