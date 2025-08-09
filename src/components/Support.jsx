@@ -1,12 +1,13 @@
 import React from "react";
 import img1 from "../assets/startup-india.png";
-import img2 from "../assets/StartupMP.svg";
+// import img2 from "../assets/StartupMP.svg";
 import img3 from "../assets/STPI.svg";
 import neuronlogo from "../assets/neuron_logo.png";
 import wadhwani from "../assets/Wadhwani_Foundation.jpg";
+import iim from "../assets/iim_mumbai.jpeg";
 
 function Support() {
-  const logos = [img1, img2, img3, wadhwani, neuronlogo];
+  const logos = [img1, iim, img3, wadhwani, neuronlogo];
 
   return (
     <section className="py-16 px-4  md:px-8 bg-white overflow-hidden">

@@ -143,7 +143,7 @@ function Header() {
               </div>
             )}
           </div>
-          <div className="p-4 space-y-2">
+          {/* <div className="p-4 space-y-2">
             <button
               onClick={handleRedirect}
               className="w-full px-4 py-2 mb-6 border-black border-2 hover:bg-gray-100 text-black"
@@ -156,7 +156,7 @@ function Header() {
             >
               Sign Up
             </button>
-          </div>
+          </div> */}
         </div>
       )}
 
@@ -169,7 +169,7 @@ function Header() {
         </div>
 
         <div className="flex items-center">
-          <nav className="flex space-x-6 mr-6">
+          <nav className="flex space-x-6 ">
             <a href="#home" className="text-black hover:text-orange-500">
               Home
             </a>
@@ -220,7 +220,7 @@ function Header() {
             </div>
           </nav>
 
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <button
               onClick={handleRedirect}
               className="px-4 py-2 border-black border-2 hover:bg-gray-100 text-black cursor-pointer"
@@ -233,7 +233,7 @@ function Header() {
             >
               Sign Up
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

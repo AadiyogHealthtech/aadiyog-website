@@ -15,7 +15,7 @@ const PricingPlans = () => {
   const monthlyPrices = {
     Individual: {
       Basic: 0,
-      Plus: 199,
+      Plus: 299,
       Pro: {
         1: 599,
         2: 999,
@@ -32,10 +32,10 @@ const PricingPlans = () => {
       },
     },
     Family: {
-      Basic: 59,
-      Plus: 499,
+      Basic: 0,
+      Plus: 299,
       Pro: {
-        1: 899,
+        1: 999,
         2: 1499,
         4: 1999,
       },
@@ -131,7 +131,7 @@ const PricingPlans = () => {
       </div>
 
       {/* Plan Type Toggle */}
-      <div className="flex justify-center mb-8">
+      {/* <div className="flex justify-center mb-8">
         <div className="flex p-1">
           {["Individual", "Couple", "Family"].map((type) => (
             <button
@@ -145,7 +145,7 @@ const PricingPlans = () => {
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Pricing Plans */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -205,7 +205,7 @@ const PricingPlans = () => {
           <p className="text-3xl font-bold mb-4">{renderPrice("Pro")}</p>
 
           {/* Consultations Toggle */}
-          <div className="flex space-x-2 mb-4">
+          {/* <div className="flex space-x-2 mb-4">
             {[1, 2, 4].map((num) => (
               <button
                 key={num}
@@ -219,7 +219,7 @@ const PricingPlans = () => {
                 {num} {num === 1 ? "call" : "calls"} / month
               </button>
             ))}
-          </div>
+          </div> */}
 
           <ul className="text-left mb-6 space-y-2 flex-grow">
             <li className="flex items-center">
@@ -228,18 +228,16 @@ const PricingPlans = () => {
             </li>
 
             <li className="flex items-center">
-              <FaCheck className="text-black mr-2" /> Dedicated wellness support
-              on WhatsApp
+              <FaCheck className="text-black mr-2" />Live Yoga Classes
             </li>
             <li className="flex items-center">
-              <FaCheck className="text-black mr-2" /> Personalized Diet &
-              Workout Guidance
+              <FaCheck className="text-black mr-2" /> Personalized Diet Guidance
             </li>
             <li className="flex items-center">
-              <FaCheck className="text-black mr-2" /> 24/7 call support
+              <FaCheck className="text-black mr-2" /> 24/7 support
             </li>
             <li className="flex items-center">
-              <FaCheck className="text-black mr-2" /> Family's Health Dashboard
+              <FaCheck className="text-black mr-2" />  Health Dashboard
             </li>
           </ul>
           <button className="w-full bg-orange-500 text-white py-2 hover:bg-orange-600 border-1 border-black cursor-pointer">
