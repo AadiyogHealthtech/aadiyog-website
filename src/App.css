@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Gistesy';
+  src: url('./assets/Gistesy.ttf') format('truetype');
+}
+
+button {
+  cursor: pointer;
+}
+.logo-name {
+  color: var(--color-grey-30, #4c4c4c);
+  text-align: center;
+  font-family: Gistesy;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; /* 88.889% */
+  letter-spacing: -0.0375rem;
+}

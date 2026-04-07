@@ -1,0 +1,106 @@
+.support-section {
+  padding: 4rem 1rem;
+  background: white;
+  overflow: hidden;
+}
+
+.section-heading {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* ================= MARQUEE ================= */
+.support-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Track */
+.support-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+/* Each duplicated set */
+.support-set {
+  display: flex;
+}
+
+/* Logo wrapper = spacing source */
+.support-logo-wrapper {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-right: 10rem;
+}
+
+/* Logo default = colored */
+.support-logo {
+  width: 150px;
+  height: 80px;
+  object-fit: contain;
+  transition: filter 0.4s ease, transform 0.3s ease;
+}
+
+/* Hover → force color */
+.support-logo-wrapper:hover .support-logo {
+  filter: grayscale(0%) !;
+}
+
+/* ================= CENTER COLOR LOGIC ================= */
+/* Gray sides, colored center */
+.support-marquee::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+
+  backdrop-filter: grayscale(100%);
+  -webkit-backdrop-filter: grayscale(100%);
+
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 30%,
+    transparent 45%,
+    transparent 55%,
+    black 70%,
+    black 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 30%,
+    transparent 45%,
+    transparent 55%,
+    black 70%,
+    black 100%
+  );
+}
+
+/* ================= ANIMATION ================= */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .support-logo-wrapper {
+    margin-right: 4rem;
+  }
+
+  .support-logo {
+    width: 100px;
+  }
+}
