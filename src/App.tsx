@@ -8,7 +8,7 @@ import { PricingPage } from "./pages/PricingPage";
 import { BlogPage } from "./pages/BlogPage";
 import { CareersPage } from "./pages/CareersPage";
 import { ContactPage } from "./pages/ContactPage";
-import './app.css'
+import './App.css'
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
