@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
@@ -8,74 +7,243 @@ import { PricingPage } from "./pages/PricingPage";
 import { BlogPage } from "./pages/BlogPage";
 import { CareersPage } from "./pages/CareersPage";
 import { ContactPage } from "./pages/ContactPage";
+import { DashboardLayout } from "./layouts/DashboardLayout";
+import { DashboardHome } from "./pages/dashboard/DashboardHome";
+import { SubscriptionPage } from "./pages/dashboard/SubscriptionPage";
+import { UpgradePage } from "./pages/dashboard/UpgradePage";
+import { CancellationPage } from "./pages/dashboard/CancellationPage";
+import { SettingsPage } from "./pages/dashboard/SettingsPage";
+import { BillingPage } from "./pages/dashboard/BillingPage";
+import { Navigate, Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import './App.css'
+
+function pageIdFromPath(pathname: string): string {
+  const path = pathname.replace(/\/+$/, "") || "/";
+
+  switch (path) {
+    case "/":
+      return "home";
+    case "/about":
+      return "about";
+    case "/how-it-works":
+      return "how-it-works";
+    case "/pricing":
+      return "pricing";
+    case "/blog":
+      return "blog";
+    case "/careers":
+      return "careers";
+    case "/contact":
+      return "contact";
+
+    case "/dashboard":
+      return "dashboard";
+    case "/dashboard/subscription":
+      return "dashboard-subscription";
+    case "/dashboard/upgrade":
+      return "dashboard-upgrade";
+    case "/dashboard/cancel":
+      return "dashboard-cancel";
+    case "/dashboard/settings":
+      return "dashboard-settings";
+    case "/dashboard/billing":
+      return "dashboard-billing";
+
+    default: {
+      if (path.startsWith("/dashboard")) return "dashboard";
+      return "home";
+    }
+  }
+}
+
+function pathFromPageId(page: string): string {
+  switch (page) {
+    case "home":
+      return "/";
+    case "about":
+      return "/about";
+    case "how-it-works":
+      return "/how-it-works";
+    case "pricing":
+      return "/pricing";
+    case "blog":
+      return "/blog";
+    case "careers":
+      return "/careers";
+    case "contact":
+      return "/contact";
+
+    case "dashboard":
+      return "/dashboard";
+    case "dashboard-subscription":
+      return "/dashboard/subscription";
+    case "dashboard-upgrade":
+      return "/dashboard/upgrade";
+    case "dashboard-cancel":
+      return "/dashboard/cancel";
+    case "dashboard-settings":
+      return "/dashboard/settings";
+    case "dashboard-billing":
+      return "/dashboard/billing";
+
+    default: {
+      if (page?.startsWith("dashboard")) return "/dashboard";
+      return "/";
+    }
+  }
+}
+
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentPage = pageIdFromPath(location.pathname);
 
   const handleNavigate = (page: string) => {
-    setCurrentPage(page);
+    navigate(pathFromPageId(page));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const renderPage = () => {
-    // Check if current page is a dashboard page
-    if (currentPage.startsWith('dashboard')) {
-      const dashboardContent = () => {
-        switch (currentPage) {
-          case 'dashboard':
-            return <DashboardHome onNavigate={handleNavigate} />;
-          case 'dashboard-subscription':
-            return <SubscriptionPage onNavigate={handleNavigate} />;
-          case 'dashboard-upgrade':
-            return <UpgradePage onNavigate={handleNavigate} />;
-          case 'dashboard-cancel':
-            return <CancellationPage onNavigate={handleNavigate} />;
-          case 'dashboard-settings':
-            return <SettingsPage />;
-          case 'dashboard-billing':
-            return <BillingPage />;
-          default:
-            return <DashboardHome onNavigate={handleNavigate} />;
+  return (
+    <Routes>
+      {/* Public routes */}
+      <Route
+        path="/"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <HomePage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
         }
-      };
+      />
+      <Route
+        path="/about"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <AboutPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
+      <Route
+        path="/how-it-works"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <HowItWorksPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
+      <Route
+        path="/pricing"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <PricingPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
+      <Route
+        path="/blog"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <BlogPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
+      <Route
+        path="/careers"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <CareersPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <ContactPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
 
-      return (
-        <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
-          {dashboardContent()}
-        </DashboardLayout>
-      );
-    }
+      {/* Dashboard routes */}
+      <Route
+        path="/dashboard"
+        element={
+          <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
+            <DashboardHome onNavigate={handleNavigate} />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/dashboard/subscription"
+        element={
+          <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
+            <SubscriptionPage onNavigate={handleNavigate} />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/dashboard/upgrade"
+        element={
+          <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
+            <UpgradePage onNavigate={handleNavigate} />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/dashboard/cancel"
+        element={
+          <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
+            <CancellationPage onNavigate={handleNavigate} />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/dashboard/settings"
+        element={
+          <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
+            <SettingsPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/dashboard/billing"
+        element={
+          <DashboardLayout currentPage={currentPage} onNavigate={handleNavigate}>
+            <BillingPage />
+          </DashboardLayout>
+        }
+      />
 
-    // Public Pages
-    return (
-      <div className="min-h-screen bg-background">
-        <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
-        <main>
-          {(() => {
-            switch (currentPage) {
-              case 'home':
-                return <HomePage />;
-              case 'about':
-                return <AboutPage />;
-              case 'how-it-works':
-                return <HowItWorksPage />;
-              case 'pricing':
-                return <PricingPage />;
-              case 'blog':
-                return <BlogPage />;
-              case 'careers':
-                return <CareersPage />;
-              case 'contact':
-                return <ContactPage />;
-              default:
-                return <HomePage />;
-            }
-          })()}
-        </main>
-        <Footer onNavigate={handleNavigate} />
-      </div>
-    );
-  };
-
-  return renderPage();
+      {/* Fallback */}
+      <Route path="/dashboard/*" element={<Navigate to="/dashboard" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 }

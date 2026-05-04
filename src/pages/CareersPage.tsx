@@ -3,31 +3,46 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
-import { Heart, Users, TrendingUp, Zap, MapPin, Clock, Briefcase } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
+import {
+  Heart,
+  Users,
+  TrendingUp,
+  Zap,
+  MapPin,
+  Clock,
+  Briefcase,
+} from "lucide-react";
 import { useState } from "react";
 
 const perks = [
   {
     icon: Heart,
     title: "Health & Wellness",
-    description: "Comprehensive health insurance and free premium Aadiyog membership"
+    description:
+      "Comprehensive health insurance and free premium Aadiyog membership",
   },
   {
     icon: Users,
     title: "Work-Life Balance",
-    description: "Flexible working hours and remote work options"
+    description: "Flexible working hours and remote work options",
   },
   {
     icon: TrendingUp,
     title: "Growth Opportunities",
-    description: "Career development programs and learning budgets"
+    description: "Career development programs and learning budgets",
   },
   {
     icon: Zap,
     title: "Innovative Culture",
-    description: "Work with cutting-edge AI technology and make an impact"
-  }
+    description: "Work with cutting-edge AI technology and make an impact",
+  },
 ];
 
 const openPositions = [
@@ -36,43 +51,49 @@ const openPositions = [
     department: "Engineering",
     location: "Bangalore, India",
     type: "Full-time",
-    description: "Build and scale our AI-powered yoga platform with modern web technologies."
+    description:
+      "Build and scale our AI-powered yoga platform with modern web technologies.",
   },
   {
     title: "AI/ML Engineer",
     department: "Engineering",
     location: "Remote",
     type: "Full-time",
-    description: "Develop advanced computer vision models for posture detection and correction."
+    description:
+      "Develop advanced computer vision models for posture detection and correction.",
   },
   {
     title: "Product Designer",
     department: "Design",
     location: "Bangalore, India",
     type: "Full-time",
-    description: "Create beautiful, intuitive experiences for our wellness platform."
+    description:
+      "Create beautiful, intuitive experiences for our wellness platform.",
   },
   {
     title: "Yoga Instructor & Coach",
     department: "Wellness",
     location: "Remote",
     type: "Contract",
-    description: "Guide users through their wellness journey with expert coaching."
+    description:
+      "Guide users through their wellness journey with expert coaching.",
   },
   {
     title: "Marketing Manager",
     department: "Marketing",
     location: "Bangalore, India",
     type: "Full-time",
-    description: "Drive growth through creative campaigns and strategic partnerships."
+    description:
+      "Drive growth through creative campaigns and strategic partnerships.",
   },
   {
     title: "Customer Success Specialist",
     department: "Support",
     location: "Remote",
     type: "Full-time",
-    description: "Help users achieve their wellness goals through exceptional support."
-  }
+    description:
+      "Help users achieve their wellness goals through exceptional support.",
+  },
 ];
 
 export function CareersPage() {
@@ -81,19 +102,60 @@ export function CareersPage() {
     email: "",
     position: "",
     brief: "",
-    resume: null as File | null
+    resume: null as File | null,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Application submitted:", formData);
-    // Handle form submission
+
+    try {
+      const form = new FormData();
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("position", formData.position);
+      form.append("brief", formData.brief);
+
+      if (formData.resume) {
+        form.append("resume", formData.resume);
+      }
+
+      const response = await fetch(
+        "https://n8n.aadiyog.in/webhook/5e2f442e-053f-43cf-b10c-4a9c7770dd14",
+        {
+          method: "POST",
+          body: form,
+        },
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit application");
+      }
+
+      const result = await response.json();
+      console.log("Success:", result);
+
+      alert("Application submitted successfully!");
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        position: "",
+        brief: "",
+        resume: null,
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -101,7 +163,7 @@ export function CareersPage() {
     if (e.target.files && e.target.files[0]) {
       setFormData({
         ...formData,
-        resume: e.target.files[0]
+        resume: e.target.files[0],
       });
     }
   };
@@ -109,7 +171,7 @@ export function CareersPage() {
   const handlePositionChange = (value: string) => {
     setFormData({
       ...formData,
-      position: value
+      position: value,
     });
   };
 
@@ -129,7 +191,8 @@ export function CareersPage() {
               <span className="text-[#f37003]">Wellness</span>
             </h1>
             <p className="text-lg text-foreground/60 leading-relaxed">
-              Join our mission to make holistic fitness accessible to everyone through innovative technology and passionate people.
+              Join our mission to make holistic fitness accessible to everyone
+              through innovative technology and passionate people.
             </p>
           </div>
         </div>
@@ -149,10 +212,16 @@ export function CareersPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {perks.map((perk, index) => (
-              <Card key={index} className="p-8 text-center border-border/50 hover:border-[#f37003]/30 transition-all hover:shadow-lg bg-white">
+              <Card
+                key={index}
+                className="p-8 text-center border-border/50 hover:border-[#f37003]/30 transition-all hover:shadow-lg bg-white"
+              >
                 <div className="mb-6">
                   <div className="inline-flex items-center justify-center h-14 w-14 rounded-xl bg-[#f37003]/10">
-                    <perk.icon className="h-7 w-7 text-[#f37003]" strokeWidth={1.5} />
+                    <perk.icon
+                      className="h-7 w-7 text-[#f37003]"
+                      strokeWidth={1.5}
+                    />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -181,7 +250,10 @@ export function CareersPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {openPositions.map((position, index) => (
-              <Card key={index} className="p-8 border-border/50 hover:border-[#f37003]/30 transition-all hover:shadow-lg bg-white">
+              <Card
+                key={index}
+                className="p-8 border-border/50 hover:border-[#f37003]/30 transition-all hover:shadow-lg bg-white"
+              >
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-[#f37003]/10 text-[#f37003] text-xs font-medium">
                     {position.department}
@@ -207,11 +279,12 @@ export function CareersPage() {
                   </div>
                 </div>
 
-                <Button 
+                <Button
                   className="w-full bg-[#f37003] hover:bg-[#d86302] text-white"
                   onClick={() => {
-                    const applicationForm = document.getElementById('application-form');
-                    applicationForm?.scrollIntoView({ behavior: 'smooth' });
+                    const applicationForm =
+                      document.getElementById("application-form");
+                    applicationForm?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Apply Now
@@ -314,7 +387,7 @@ export function CareersPage() {
               </div>
 
               <div className="pt-4">
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-[#f37003] hover:bg-[#d86302] text-white"
                 >
@@ -323,7 +396,8 @@ export function CareersPage() {
               </div>
 
               <p className="text-xs text-foreground/60 text-center">
-                By submitting this form, you agree to our Privacy Policy and Terms of Service
+                By submitting this form, you agree to our Privacy Policy and
+                Terms of Service
               </p>
             </form>
           </Card>
@@ -337,9 +411,10 @@ export function CareersPage() {
             Don't See the Right Role?
           </h2>
           <p className="text-foreground/60 mb-8">
-            We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+            We're always looking for talented individuals. Send us your resume
+            and we'll keep you in mind for future opportunities.
           </p>
-          <Button 
+          <Button
             variant="outline"
             className="border-[#f37003] text-[#f37003] hover:bg-[#f37003]/10"
           >
