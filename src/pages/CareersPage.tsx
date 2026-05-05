@@ -299,7 +299,7 @@ export function CareersPage() {
 									required
 									value={formData.brief}
 									onChange={handleChange}
-									placeholder="Why are you interested in this position? What makes you a great fit?"
+									placeholder="Why are you interested in this position? What makes you a great fit? (250 words max)"
 									rows={6}
 									className="mt-2 resize-none"
 								/>
