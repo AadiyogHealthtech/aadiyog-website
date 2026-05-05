@@ -102,7 +102,7 @@ export function CareersPage() {
     email: "",
     position: "",
     brief: "",
-    resume: null as File | null,
+    resumeLink: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -114,10 +114,7 @@ export function CareersPage() {
       form.append("email", formData.email);
       form.append("position", formData.position);
       form.append("brief", formData.brief);
-
-      if (formData.resume) {
-        form.append("resume", formData.resume);
-      }
+      form.append("resumeLink", formData.resumeLink);
 
       const response = await fetch(
         "https://n8n.aadiyog.in/webhook/5e2f442e-053f-43cf-b10c-4a9c7770dd14",
@@ -142,7 +139,7 @@ export function CareersPage() {
         email: "",
         position: "",
         brief: "",
-        resume: null,
+        resumeLink: "",
       });
     } catch (error) {
       console.error("Error:", error);
@@ -157,15 +154,6 @@ export function CareersPage() {
       ...formData,
       [e.target.name]: e.target.value,
     });
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setFormData({
-        ...formData,
-        resume: e.target.files[0],
-      });
-    }
   };
 
   const handlePositionChange = (value: string) => {
@@ -369,21 +357,17 @@ export function CareersPage() {
               </div>
 
               <div>
-                <Label htmlFor="resume">Resume/CV *</Label>
-                <div className="mt-2">
-                  <Input
-                    id="resume"
-                    name="resume"
-                    type="file"
-                    required
-                    onChange={handleFileChange}
-                    accept=".pdf,.doc,.docx"
-                    className="cursor-pointer"
-                  />
-                  <p className="text-xs text-foreground/60 mt-2">
-                    Accepted formats: PDF, DOC, DOCX (Max 5MB)
-                  </p>
-                </div>
+                <Label htmlFor="resumeLink">Resume Link *</Label>
+                <Input
+                  id="resumeLink"
+                  name="resumeLink"
+                  type="url"
+                  required
+                  value={formData.resumeLink}
+                  onChange={handleChange}
+                  placeholder="Shareable Drive/Dropbox link"
+                  className="mt-2"
+                />
               </div>
 
               <div className="pt-4">
