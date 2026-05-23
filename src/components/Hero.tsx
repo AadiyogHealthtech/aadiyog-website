@@ -49,7 +49,7 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
+            {/* <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
               <div>
                 <div className="text-3xl font-bold text-foreground">10K+</div>
                 <div className="text-sm text-foreground/60 mt-1">Active Users</div>
@@ -62,7 +62,7 @@ export function Hero() {
                 <div className="text-3xl font-bold text-foreground">4.9</div>
                 <div className="text-sm text-foreground/60 mt-1">User Rating</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column - Image */}
