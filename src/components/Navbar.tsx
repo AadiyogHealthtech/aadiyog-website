@@ -93,7 +93,7 @@ export function Navbar({ currentPage = 'home', onNavigate }: NavbarProps) {
             </button>
             <button 
               onClick={() => handleNavigation('contact')}
-              className={`text-sm transition-colors ${
+              className={`text-sm transition-colors $
                 currentPage === 'contact' ? 'text-[#f37003]' : 'text-foreground/70 hover:text-foreground'
               }`}
             >
@@ -184,7 +184,7 @@ export function Navbar({ currentPage = 'home', onNavigate }: NavbarProps) {
               </button>
               <button 
                 onClick={() => handleNavigation('contact')}
-                className={`text-left px-4 py-2 text-sm transition-colors ${
+                className={`text-left px-4 py-2 text-sm transition-colors $
                   currentPage === 'contact' ? 'text-[#f37003]' : 'text-foreground/70'
                 }`}
               >

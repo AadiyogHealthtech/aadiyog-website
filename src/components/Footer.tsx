@@ -19,7 +19,7 @@ const footerLinks = {
     { label: "Press", href: "#", page: "contact" },
   ],
   legal: [
-    { label: "Privacy Policy", href: "#", page: "home" },
+    { label: "Privacy Policy", href: "#", page: "privacy-policy" },
     { label: "Terms of Service", href: "#", page: "home" },
     { label: "Cookie Policy", href: "#", page: "home" },
   ],
@@ -151,7 +151,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </p>
             <div className="flex gap-6">
               <button
-                onClick={() => handleLinkClick("home")}
+                onClick={() => handleLinkClick("privacy-policy")}
                 className="text-sm text-foreground/60 hover:text-[#f37003] transition-colors"
               >
                 Privacy Policy

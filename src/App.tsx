@@ -7,6 +7,7 @@ import { PricingPage } from "./pages/PricingPage";
 import { BlogPage } from "./pages/BlogPage";
 import { CareersPage } from "./pages/CareersPage";
 import { ContactPage } from "./pages/ContactPage";
+import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { DashboardLayout } from "./layouts/DashboardLayout";
 import { DashboardHome } from "./pages/dashboard/DashboardHome";
 import { SubscriptionPage } from "./pages/dashboard/SubscriptionPage";
@@ -35,6 +36,8 @@ function pageIdFromPath(pathname: string): string {
       return "careers";
     case "/contact":
       return "contact";
+    case "/privacy-policy":
+      return "privacy-policy";
 
     case "/dashboard":
       return "dashboard";
@@ -72,6 +75,8 @@ function pathFromPageId(page: string): string {
       return "/careers";
     case "contact":
       return "/contact";
+    case "privacy-policy":
+      return "/privacy-policy";
 
     case "dashboard":
       return "/dashboard";
@@ -185,6 +190,18 @@ export default function App() {
             <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
             <main>
               <ContactPage />
+            </main>
+            <Footer onNavigate={handleNavigate} />
+          </div>
+        }
+      />
+      <Route
+        path="/privacy-policy"
+        element={
+          <div className="min-h-screen bg-background">
+            <Navbar currentPage={currentPage} onNavigate={handleNavigate} />
+            <main>
+              <PrivacyPolicyPage />
             </main>
             <Footer onNavigate={handleNavigate} />
           </div>
